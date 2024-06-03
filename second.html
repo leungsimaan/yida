@@ -17,11 +17,11 @@
   <body>
     <div class="yemei">
       <h1>
-        <a href="#part1">part1.祝贺vcr </a
-        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="#part2">part2.制作过程</a
-        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="#part3">part3.我们的照片</a>&nbsp;&nbsp;
+        <a href="#part1">part1.祝贺vcr </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#part2">part2.制作过程</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#part3">part3.我们的照片</a
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="index.html">sign out </a>
       </h1>
     </div>
     <div class="beijing">
@@ -73,12 +73,14 @@
         ></path>
       </svg>
       <audio
+        id="myAudio"
         src="Summer Salt - Another Piece of the Cake.mp3"
         controls
         type="audio/mp3"
         autoplay
         loop
       ></audio>
+
       <p id="part2-zhengwen">
         <br /><br /><br />欢迎来到达达的线上生日party~接下来请跟着曼曼的指引开启你的专属庆祝活动吧~~~<br /><br /><br /><br /><br /><br /><br /><br />
       </p>
@@ -88,10 +90,16 @@
     <section class="diyibufen">
       <h2 id="part1">part1.曼曼的生日祝贺VCR</h2>
       <p id="part1-zhengwen">
-        在这个重要的一天，你亲爱的曼曼有什么要对你说的呢？请看VCR~~
+        在这个重要的一天，你亲爱的曼曼有什么要对你说的呢？请看VCR~~<br /><br /><br /><br />
       </p>
       <p class="vcr">
-        <video src="vcr.mp4" controls type="video/mp4" width="1000"></video>
+        <video
+          id="myVideo"
+          src="vcr.mp4"
+          controls
+          type="video/mp4"
+          width="1000"
+        ></video>
       </p>
     </section>
 
@@ -125,5 +133,26 @@
         <img src="hezhao/hezhao (20).jpg" alt="合照20" width="150px" />
       </div>
     </section>
+    <script>
+      // 获取音频元素
+      var audio = document.getElementById("myAudio");
+      var video = document.getElementById("myVideo");
+
+      // 设置初始音量为30%
+      audio.volume = 0.3;
+      // 当视频开始播放时暂停音频
+      video.addEventListener("play", function () {
+        audio.pause();
+      });
+
+      // 当视频暂停或结束时继续播放音频
+      video.addEventListener("pause", function () {
+        audio.play();
+      });
+
+      video.addEventListener("ended", function () {
+        audio.play();
+      });
+    </script>
   </body>
 </html>

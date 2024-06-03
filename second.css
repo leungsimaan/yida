@@ -101,3 +101,37 @@ svg {
   ); /* 一行六张图片，每张图片占据 16.666% 的宽度，并留出 20px 的间距 */
   margin: 10px; /* 设置图片之间的间距 */
 }
+/* 媒体查询：最大宽度600px时，调整样式以适应手机 */
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+    padding: 0px;
+  }
+
+  .yemei {
+    font-size: 8px;
+  }
+
+  #biaoti2 {
+    font-size: 40px;
+    padding: 20px;
+  }
+
+  #part1,
+  #part2,
+  #part3 {
+    font-size: 30px;
+  }
+
+  #part1-zhengwen,
+  #part2-zhengwen {
+    font-size: 16px;
+  }
+  #myVideo {
+    padding-top: 100px;
+    width: 500px;
+  }
+  .img-container img {
+    width: calc(40% - 10px); /* 在小屏幕上每行两张图片 */
+  }
+}
