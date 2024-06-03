@@ -19,10 +19,49 @@ a {
   width: 100%; /* 可选：确保宽度为100% */
   text-align: center; /* 确保内容文字居中 */
 }
+#part2 {
+  font-family: "ZCOOL KuaiLe", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+}
 .zhizuo img {
   margin-bottom: 20px; /* 给图片间添加间距 */
 }
 .yewei {
   font-family: "Courier New", Courier, monospace;
   font-size: 10px;
+}
+
+button {
+  border: none;
+  background-color: #c76040;
+  background: linear-gradient(to right, rgb(154, 233, 243), rgb(235, 135, 177));
+  border-radius: 50px;
+  padding: 1px 73px;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover .center-button {
+  color: rgb(255, 47, 82);
+  font-weight: bold;
+}
+
+/* 媒体查询：最大宽度600px时，调整样式以适应手机 */
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+    padding: 0px;
+    align-items: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  #part2 {
+    font-size: 30px;
+  }
+
+  .zhizuo img {
+    width: 100%;
+    margin: 20px;
+  }
 }

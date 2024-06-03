@@ -35,9 +35,19 @@
       <h3>弄好啦！</h3>
       <img src="guochengtu/guocheng (7).png" alt="图片7" width="1000px" />
     </div>
-    <a href="second.html">返回→</a>
+    <button type="button" id="TurnAroundButton">
+      <span class="center-button"><b>返回</b></span>
+    </button>
     <div class="yewei">
       <h4>&copy;一切解释权归曼曼所有</h4>
     </div>
+
+    <script>
+      document
+        .getElementById("TurnAroundButton")
+        .addEventListener("click", function () {
+          window.location.href = "second.html";
+        });
+    </script>
   </body>
 </html>
